@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pixil-frame-0" translatesAutoresizingMaskIntoConstraints="NO" id="jFR-D5-EUB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="812"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="812" id="C7f-Rk-5GN"/>
+                                    <constraint firstAttribute="width" constant="414" id="l1V-gP-01O"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNz-ok-XyP">
                                 <rect key="frame" x="20" y="295" width="374" height="44"/>
                                 <state key="normal" title="Button"/>
@@ -29,14 +37,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vL-fM-ptT">
                                 <rect key="frame" x="20" y="359" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x1o-2r-jyG">
-                                <rect key="frame" x="10" y="64" width="384" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="tNY-OX-Q4S">
@@ -204,7 +205,9 @@
                                                 <rect key="frame" x="100" y="0.0" width="94.5" height="31"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="0"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="0">
+                                                    <color key="baseBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="buttonZeroAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TOA-hc-QWI"/>
                                                 </connections>
@@ -226,19 +229,30 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x1o-2r-jyG">
+                                <rect key="frame" x="10" y="64" width="384" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tNY-OX-Q4S" secondAttribute="trailing" constant="10" id="0o3-UA-c5h"/>
                             <constraint firstItem="tNY-OX-Q4S" firstAttribute="top" secondItem="6vL-fM-ptT" secondAttribute="bottom" constant="33" id="188-dd-Svc"/>
                             <constraint firstItem="tNY-OX-Q4S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="2NN-8B-1xH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6vL-fM-ptT" secondAttribute="trailing" constant="20" id="9DB-5W-pqj"/>
                             <constraint firstItem="WNz-ok-XyP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JmR-Si-UTU"/>
+                            <constraint firstItem="jFR-D5-EUB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QU6-A1-aO0"/>
+                            <constraint firstItem="jFR-D5-EUB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ue7-gO-ZhX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jFR-D5-EUB" secondAttribute="bottom" constant="50" id="WCV-xT-drb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WNz-ok-XyP" secondAttribute="trailing" constant="20" id="Wwr-cX-eow"/>
                             <constraint firstItem="6vL-fM-ptT" firstAttribute="top" secondItem="WNz-ok-XyP" secondAttribute="bottom" constant="20" id="Y4R-Jr-1IX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6vL-fM-ptT" secondAttribute="trailing" constant="20" id="Zad-LU-t0d"/>
                             <constraint firstItem="6vL-fM-ptT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZfX-pg-lbJ"/>
+                            <constraint firstItem="jFR-D5-EUB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aWK-8U-6QN"/>
                             <constraint firstItem="tNY-OX-Q4S" firstAttribute="top" secondItem="6vL-fM-ptT" secondAttribute="bottom" constant="33" id="bfy-Gd-oYS"/>
                             <constraint firstItem="6vL-fM-ptT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cgu-ac-m5Z"/>
                             <constraint firstItem="WNz-ok-XyP" firstAttribute="top" secondItem="x1o-2r-jyG" secondAttribute="bottom" constant="31" id="k86-3X-cd0"/>
@@ -257,14 +271,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pixil-frame-0" width="720" height="1280"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
